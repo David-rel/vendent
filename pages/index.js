@@ -32,3 +32,11 @@ const Home = withAuthInfo((props) => {
 });
 
 export default Home;
+
+
+// github
+//git add .
+//git commit -m "<message>"
+//git push
+
+//git pull
