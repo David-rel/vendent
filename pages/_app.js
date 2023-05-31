@@ -9,7 +9,7 @@ export default function App({ Component, pageProps }) {
       <Head>
         <title>Vendent</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <link rel="icon" href="./static/favicon.ico" />
+        <link rel="icon" href="./icon.png" />
       </Head>
       <Component {...pageProps} />
     </AuthProvider>
