@@ -5,7 +5,7 @@ import {
   useLogoutFunction,
 } from "@propelauth/react";
 
-function index() {
+function Profile() {
 
   const logoutFunction = useLogoutFunction();
   return (
@@ -15,7 +15,7 @@ function index() {
   );
 }
 
-export default index
+export default Profile
 
 
 
