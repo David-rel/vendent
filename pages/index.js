@@ -1,4 +1,10 @@
-import { useRedirectFunctions, withAuthInfo, useLogoutFunction } from "@propelauth/react";
+import {
+  useRedirectFunctions,
+  withAuthInfo,
+  useLogoutFunction,
+} from "@propelauth/react";
+
+import { useState } from "react";
 
 const Home = withAuthInfo((props) => {
   const { redirectToLoginPage, redirectToSignupPage, redirectToAccountPage } =
