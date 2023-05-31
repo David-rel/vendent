@@ -1,3 +1,7 @@
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import HeaderLogin from "@/components/HeaderLogin";
+import NavbarLogin from "@/components/NavbarLogin";
 import {
   useRedirectFunctions,
   withAuthInfo,
@@ -15,17 +19,17 @@ const Home = withAuthInfo((props) => {
   if (props.isLoggedIn) {
     return (
       <div>
-        <p>You are logged in as {props.user.email}</p>
-        <button onClick={redirectToAccountPage}>Account</button>
+        <HeaderLogin />
+        <NavbarLogin />
+        <Footer />
         <button onClick={logoutFunction}>Logout</button>
       </div>
     );
   } else {
     return (
       <div>
-        <p>You are not logged in</p>
-        <button onClick={redirectToLoginPage}>Login</button>
-        <button onClick={redirectToSignupPage}>Signup</button>
+        <Header />
+        <Footer />
       </div>
     );
   }
