@@ -12,7 +12,7 @@ const Footer = () => (
           <p className="font-sm">
             Our mission is to make online shopping more affordable by providing
             high-quality products at the most competitive prices with reliable
-            consistency.{" "}
+            consistency.
           </p>
         </div>
         <div className="text-center w-1/3">

@@ -14,7 +14,7 @@ const Header = withAuthInfo((props) => {
       </div>
 
       <div className="text-center text-white text-lg lg:inline-block hidden">
-        <h2 className="italic">“Your inspiring quote here”</h2>
+        <h2 className="italic">Your inspiring quote here</h2>
       </div>
 
       <div>
