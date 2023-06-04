@@ -29,9 +29,9 @@ export default function Navbar() {
                     Hot Deals
                   </a>
                 </Link>
-                <Link href="/forYou" legacyBehavior>
+                <Link href="/create" legacyBehavior>
                   <a className="text-yellow-300 hover:text-yellow-400 px-3 py-2 rounded-md text-lg font-medium">
-                    For You
+                    Create
                   </a>
                 </Link>
                 <Link href="/newReleases" legacyBehavior>
@@ -84,9 +84,9 @@ export default function Navbar() {
                   Hot Deals
                 </a>
               </Link>
-              <Link href="/forYou" legacyBehavior>
+              <Link href="/create" legacyBehavior>
                 <a className="text-yellow-300 hover:text-yellow-400 block px-3 py-2 rounded-md text-base text-xl font-medium">
-                  For You
+                  Create
                 </a>
               </Link>
               <Link href="/newReleases" legacyBehavior>
