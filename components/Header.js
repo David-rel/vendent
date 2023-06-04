@@ -14,7 +14,7 @@ const Header = withAuthInfo((props) => {
       </div>
 
       <div className="text-center text-black text-lg lg:inline-block hidden">
-        <h2 className="italic">Everything is better when it's all on one place</h2>
+        <h2 className="italic">Everything is better when it is all on one place</h2>
       </div>
 
       <div>
