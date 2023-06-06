@@ -134,6 +134,6 @@ const Header = withAuthInfo((props) => {
       </Link>
     </header>
   );
-});
+}); 
 
 export default Header;

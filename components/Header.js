@@ -14,12 +14,12 @@ const Header = withAuthInfo((props) => {
       </div>
 
       <div className="text-center text-black text-lg lg:inline-block hidden">
-        <h2 className="italic">Everything is better when it is all on one place</h2>
+        <h2 className="italic">Everything is better when it's all on one place</h2>
       </div>
 
       <div>
         <button
-          className="px-5 py-2 text-black bg-blue-500 rounded-md hover:bg-yellow-100"
+          className="px-5 py-2 text-white bg-blue-500 rounded-md hover:bg-yellow-100"
           onClick={redirectToLoginPage}
         >
           Login
