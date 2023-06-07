@@ -1,0 +1,81 @@
+const axios = require('axios')
+const fs = require('fs')
+const crypto = require('crypto')
+
+// AWS Region code, AWS Access Key and AWS Secret Key
+const region = 'us-east-1'
+const accessKeyId = 'AKIARV2I7LKAJTSG3EY4'
+const secretAccessKey = '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'
+
+// The base URL for the Amazon Product Advertising API
+const url = `https://us-east-1.paapi5.amazon.com/paapi5/searchitems`
+
+// Function to create a signature for the request
+function createSignature(request) {
+  const stringToSign =
+    request.method +
+    '\n' +
+    request.hostname +
+    '\n' +
+    request.path +
+    '\n' +
+    request.data
+
+  return crypto
+    .createHmac('sha256', secretAccessKey)
+    .update(stringToSign)
+    .digest('base64')
+}
+
+async function fetchProducts(keywords) {
+  // Create the request parameters
+  const params = {
+    Keywords: keywords,
+    PartnerType: 'Associates',
+    Marketplace: 'www.amazon.com',
+    PartnerTag: 'vendent-20', 
+    Operation: 'SearchItems',
+  }
+
+  // Create the request
+  const request = {
+    method: 'POST',
+    url: url,
+    hostname: 'us-east-1.paapi5.amazon.com',
+    path: '/paapi5/searchitems',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-Amz-Date': new Date().toISOString(),
+      'X-Amz-Target':
+        'com.amazon.paapi5.v1.ProductAdvertisingAPIv1.SearchItems',
+      'X-Amz-Credential':
+        accessKeyId +
+        '/' +
+        new Date().toISOString().substr(0, 8) +
+        '/' +
+        region +
+        '/ProductAdvertisingAPI/aws4_request',
+      'X-Amz-Signature': createSignature(request),
+    },
+    data: params,
+  }
+
+  // Send the request
+  const response = await axios(request)
+
+  // Extract the affiliate links
+  const items = response.data.ItemsResult.Items || []
+  const links = items.map((item) => item.DetailPageURL)
+
+  return links
+}
+
+// Use the function
+fetchProducts('Harry Potter')
+  .then((links) => {
+    console.log(links)
+
+    // Save the links to a JSON file
+    fs.writeFileSync('links.json', JSON.stringify(links, null, 2))
+  })
+  .catch((err) => console.error(err))

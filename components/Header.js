@@ -19,7 +19,7 @@ const Header = withAuthInfo((props) => {
 
       <div>
         <button
-          className="px-5 py-2 text-white bg-blue-500 rounded-md hover:bg-yellow-100"
+          className="px-5 py-2 text-white bg-blue-500 rounded-md hover:bg-gray-100 hover:text-black focus:outline-none focus:bg-gray"
           onClick={redirectToLoginPage}
         >
           Login

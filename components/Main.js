@@ -1,9 +1,11 @@
 import Image from 'next/image'
 import FadeInSection from './FadeInSection'
+import { useRedirectFunctions } from '@propelauth/react'
 
 export default function Home() {
+  const { redirectToSignupPage } = useRedirectFunctions()
   return (
-    <div className="min-h-screen py-2 px-5 text-gray-700 overflow-auto scrolling-touch scroll-snap-y scroll-snap-mandatory">
+    <div className="min-h-screen py-2 text-gray-700 overflow-auto scrolling-touch scroll-snap-y scroll-snap-mandatory">
       {/* Hero Section */}
       <FadeInSection>
         <section className="h-screen flex justify-center items-center bg-blue-500 text-white text-center px-20">
@@ -15,9 +17,14 @@ export default function Home() {
               Your one-stop platform for the best deals across the web. Shop
               smarter and save with every purchase!
             </h2>
-            <button className="transition duration-500 ease-in-out px-4 py-2 bg-white text-blue-500 text-sm font-semibold rounded-full hover:bg-blue-500 hover:text-white transform hover:-translate-y-1 hover:scale-110">
-              Start your saving journey with Vendent – Sign Up Now!
-            </button>
+            <div>
+              <button
+                className="transition duration-500 ease-in-out px-4 py-2 bg-white text-blue-500 text-sm font-semibold rounded-full hover:bg-blue-500 hover:text-white transform hover:-translate-y-1 hover:scale-110"
+                onClick={redirectToSignupPage}
+              >
+                Sign up for Vendent
+              </button>
+            </div>
           </div>
           <Image
             src="/guy1.png"
