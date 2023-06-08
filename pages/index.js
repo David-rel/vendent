@@ -2,7 +2,8 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import HeaderLogin from "@/components/HeaderLogin";
 import NavbarLogin from "@/components/NavbarLogin";
-import Main from '@/components/Main'
+import Landing from '@/components/Landing';
+import Main1 from '@/components/Main1'
 import {
   withAuthInfo,
 } from "@propelauth/react";
@@ -15,6 +16,7 @@ const Home = withAuthInfo((props) => {
       <div>
         <HeaderLogin />
         <NavbarLogin />
+        <Main1 />
         <Footer />
       </div>
     );
@@ -22,7 +24,7 @@ const Home = withAuthInfo((props) => {
     return (
       <div>
         <Header />
-        <Main />
+        <Landing />
         <Footer />
       </div>
     );

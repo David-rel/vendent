@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import FadeInSection from './FadeInSection'
 import { useRedirectFunctions } from '@propelauth/react'
 
@@ -8,33 +7,32 @@ export default function Home() {
     <div className="min-h-screen py-2 text-gray-700 overflow-auto scrolling-touch scroll-snap-y scroll-snap-mandatory">
       {/* Hero Section */}
       <FadeInSection>
-        <section className="h-screen flex justify-center items-center bg-blue-500 text-white text-center px-20">
-          <div className="m-0">
-            <h1 className="text-2xl font-bold mt-5">
-              Vendent: Making Online Shopping Better Than Ever!
-            </h1>
-            <h2 className="text-xl mt-3 mb-5">
-              Your one-stop platform for the best deals across the web. Shop
-              smarter and save with every purchase!
-            </h2>
-            <div>
-              <button
-                className="transition duration-500 ease-in-out px-4 py-2 bg-white text-blue-500 text-sm font-semibold rounded-full hover:bg-blue-500 hover:text-white transform hover:-translate-y-1 hover:scale-110"
-                onClick={redirectToSignupPage}
-              >
-                Sign up for Vendent
-              </button>
-            </div>
-          </div>
-          <Image
-            src="/guy1.png"
-            alt="Description of image"
-            className="ml-10 mr-10"
-            width={500}
-            height={200}
-          />
+        <section 
+          className="background-image-fade flex flex-col h-screen items-center justify-center w-full flex-1 px-20 text-center bg-cover" 
+          style={{
+            backgroundImage: `url(https://images.template.net/wp-content/uploads/2016/04/Blue-Background-Wallpaper.jpg)`, //Replace with your image url
+          }}
+          >
+          <h1 className="text-6xl font-bold">
+            Welcome to <a className="text-blue-600" href="https://www.vendent.com/">Vendent!</a>
+          </h1>
+
+         <p className="mt-3 text-2xl">
+            Your one-stop platform for the best online deals.
+          </p>
+
+          <div className="flex items-center mt-6">
+            <button
+              className="mx-4 px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
+              onClick={redirectToSignupPage}
+           >
+             Get Started
+            </button>
+      
+         </div>
         </section>
       </FadeInSection>
+
 
       {/* Benefits Section */}
       <FadeInSection>
