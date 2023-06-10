@@ -4,11 +4,11 @@ import { useRedirectFunctions } from '@propelauth/react'
 export default function Home() {
   const { redirectToSignupPage } = useRedirectFunctions()
   return (
-    <div className="min-h-screen py-2 text-gray-700 overflow-auto scrolling-touch scroll-snap-y scroll-snap-mandatory">
+    <div className="min-h-screen py-2 text-gray-700 overflow-auto scrolling-touch scroll-snap-y scroll-snap-mandatory mt-0">
       {/* Hero Section */}
       <FadeInSection>
         <section 
-          className="background-image-fade flex flex-col h-screen items-center justify-center w-full flex-1 px-20 text-center bg-cover" 
+          className="background-image-fade flex flex-col h-screen items-center justify-center w-full flex-1 px-20 text-center bg-cover mt-0" 
           style={{
             backgroundImage: `url(https://images.template.net/wp-content/uploads/2016/04/Blue-Background-Wallpaper.jpg)`, //Replace with your image url
           }}

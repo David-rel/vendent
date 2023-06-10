@@ -23,7 +23,7 @@ export default function Navbar() {
           </div>
           <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
             <div className="hidden sm:block sm:ml-6">
-              <div className="flex lg:space-x-36 md:space-x-28 sm:space-x-10">
+              <div className="flex lg:space-x-28 md:space-x-20 sm:space-x-3">
                 <Link href="/hotDeals" legacyBehavior>
                   <a className="text-yellow-300 hover:text-yellow-400 px-3 py-2 rounded-md text-lg font-medium">
                     Hot Deals
@@ -47,6 +47,11 @@ export default function Navbar() {
                 <Link href="/help" legacyBehavior>
                   <a className="text-yellow-300 hover:text-yellow-400 px-3 py-2 rounded-md text-lg font-medium">
                     Help
+                  </a>
+                </Link>
+                <Link href="/help" legacyBehavior>
+                  <a className="text-yellow-300 hover:text-yellow-400 px-3 py-2 rounded-md text-lg font-medium">
+                    Feedback
                   </a>
                 </Link>
               </div>
@@ -111,3 +116,4 @@ export default function Navbar() {
     </nav>
   );
 }
+0

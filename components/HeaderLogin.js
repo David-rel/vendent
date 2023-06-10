@@ -34,19 +34,19 @@ const Header = withAuthInfo((props) => {
     <div className="absolute bg-white shadow-md mt-2 py-2 w-48 rounded-md z-10">
       <a
         href="#"
-        className="block px-4 py-2 hover:bg-blue-500 hover:text-white"
+        className="block px-4 py-2 hover:bg-green-500 hover:text-white"
       >
         Menu 1 Item 1
       </a>
       <a
         href="#"
-        className="block px-4 py-2 hover:bg-blue-500 hover:text-white"
+        className="block px-4 py-2 hover:bg-green-500 hover:text-white"
       >
         Menu 1 Item 2
       </a>
       <a
         href="#"
-        className="block px-4 py-2 hover:bg-blue-500 hover:text-white"
+        className="block px-4 py-2 hover:bg-green-500 hover:text-white"
       >
         Menu 1 Item 3
       </a>
@@ -57,19 +57,19 @@ const Header = withAuthInfo((props) => {
     <div className="absolute bg-white shadow-md mt-2 py-2 w-48 rounded-md z-10">
       <a
         href="#"
-        className="block px-4 py-2 hover:bg-blue-500 hover:text-white"
+        className="block px-4 py-2 hover:bg-green-500 hover:text-white"
       >
         Menu 2 Item 1
       </a>
       <a
         href="#"
-        className="block px-4 py-2 hover:bg-blue-500 hover:text-white"
+        className="block px-4 py-2 hover:bg-green-500 hover:text-white"
       >
         Menu 2 Item 2
       </a>
       <a
         href="#"
-        className="block px-4 py-2 hover:bg-blue-500 hover:text-white"
+        className="block px-4 py-2 hover:bg-green-500 hover:text-white"
       >
         Menu 2 Item 3
       </a>
@@ -77,7 +77,7 @@ const Header = withAuthInfo((props) => {
   );
 
   return (
-    <header className="flex justify-between items-center p-6 bg-yellow-500 shadow-md">
+    <header className="flex justify-between items-center p-6 bg-blue-500 shadow-md">
       {/* Logo */}
       <Link href="/">
       <div className="flex items-center rounded-full">
@@ -105,7 +105,7 @@ const Header = withAuthInfo((props) => {
             placeholder="Search here..."
             className="p-2 rounded-l-md border-2 border-gray-300 w-96"
           />
-          <button className="p-2 rounded-r-md bg-yellow-100 text-black">
+          <button className="p-2 rounded-r-md bg-green-500 text-white">
             Search
           </button>
         </div>
